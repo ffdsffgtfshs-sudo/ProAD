@@ -166,4 +166,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-#python dinomaly_mvtec_test.py --data_path ./mvtec_anomaly_detection --checkpoint_dir ./checkpoints
+#python AsymAD_mvtec_test.py --data_path ./mvtec_anomaly_detection --checkpoint_dir ./checkpoints
