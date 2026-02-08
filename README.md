@@ -1,18 +1,18 @@
-# AsymAD
-Official implementation of the paper:AsymAD_Asymmetric Student-Teacher Network with Dual-Perturbation for Precise Multi-class Anomaly Detection
+# ProAD
+Official implementation of the paper:ProAD_Unifying High Precision and Background Robustness in Multi-class Anomaly Detection
 ## 1. Environments
 
 Create a new conda environment and install required packages.
 
 ```
-conda create -n asymad python=3.8.12
-conda activate asymad
+conda create -n ProAD python=3.8.12
+conda activate ProAD
 pip install -r requirements.txt
 ```
 Experiments are conducted on NVIDIA GeForce RTX 3090 (24GB). Same GPU and package version are recommended. 
 
 ## 2. Prepare Datasets
-./ refers to the current directory of the AsymAD code, where datasets are stored by default. 
+./ refers to the current directory of the ProAD code, where datasets are stored by default. 
 You can change this path, but ensure you update the data_path variable in the code accordingly.
 
 ### MVTec AD
@@ -78,13 +78,13 @@ Note: The directory structure within ./Real-IAD will remain unchanged after the 
 
 Multi-Class Setting
 ```
-python AsymAD_mvtec.py --data_path ./mvtec_anomaly_detection
+python ProAD_mvtec.py --data_path ./mvtec_anomaly_detection
 ```
 ```
-python AsymAD_visa.py --data_path ./VisA/1cls
+python ProAD_visa.py --data_path ./VisA/1cls
 ```
 ```
-python AsymAD_realiad.py --data_path ./Real-IAD
+python ProAD_realiad.py --data_path ./Real-IAD
 ```
 
 ## 4. Model Test
@@ -96,13 +96,13 @@ You can either retrain the model from scratch or use our pre-trained weights pro
 | VisA | DcL | [Google Drive](https://drive.google.com/file/d/12U2aIkyxHrNK9QZ8q8UzhQnAdJXhBLRJ/view?usp=sharing) |
 | Real-IAD | DcL | [Google Drive](https://drive.google.com/file/d/1jSlv6oB_s0fPJKXGoEAfkQ3r3qcJ_pD-/view?usp=sharing) |
 ```
-python AsymAD_mvtec_test.py --data_path ./mvtec_anomaly_detection --checkpoint_dir ./checkpoints
+python ProAD_mvtec_test.py --data_path ./mvtec_anomaly_detection --checkpoint_dir ./checkpoints
 ```
 ```
-python AsymAD_visa_test.py --data_path ./VisA/1cls --checkpoint_dir ./checkpoints
+python ProAD_visa_test.py --data_path ./VisA/1cls --checkpoint_dir ./checkpoints
 ```
 ```
-python AsymAD_realiad_test.py --data_path ./Real-IAD --checkpoint_dir ./checkpoints
+python ProAD_realiad_test.py --data_path ./Real-IAD --checkpoint_dir ./checkpoints
 ```
 
 
